@@ -25,7 +25,7 @@ public class WebSecurityConfig {
         httpSecurity
                 .authorizeHttpRequests(auth->
                         auth
-                                .requestMatchers("/posts").permitAll()
+                                .requestMatchers("/posts","/error","/public/**").permitAll()
                                 .requestMatchers("/posts/**").hasAnyRole("ADMIN")
                                 .anyRequest().authenticated())
                 .csrf(csrfConfig->csrfConfig.disable())
