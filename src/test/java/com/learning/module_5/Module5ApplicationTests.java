@@ -14,7 +14,7 @@ class Module5ApplicationTests {
 
 	@Test
 	void contextLoads() {
-		UserEntity user=new UserEntity(4L,"pavanprasanth48850@gmail.com","1234");
+		UserEntity user=new UserEntity(4L,"pavanprasanth48850@gmail.com","1234","pavan");
 
 		String token= jwtService.generateToken(user);
 
